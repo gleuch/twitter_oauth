@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors = ["Richard Taylor", "Greg Leuch"]
   s.date = %q{2009-03-20}
   s.description = %q{twitter_oauth is a Ruby library for talking to twitter using the new oauth method.}
-  s.email = %q{moomerman@gmail.com contact@gleuch.com}
+  s.email = %q{contact@gleuch.com}
   s.files = ["README.textile", "lib/twitter_oauth", "lib/twitter_oauth.rb", "lib/twitter_oauth/client.rb", "lib/twitter_oauth/account.rb", "lib/twitter_oauth/statuses.rb", "lib/twitter_oauth/direct_messages.rb", "lib/twitter_oauth/search.rb", "lib/twitter_oauth/blocks.rb" , "lib/twitter_oauth/friendships.rb", "lib/twitter_oauth/notifications.rb", "lib/twitter_oauth/user.rb", "lib/twitter_oauth/favorites.rb", "lib/twitter_oauth/utils.rb"]
   s.has_rdoc = false
   s.homepage = %q{http://github.com/gleuch/twitter_oauth}
