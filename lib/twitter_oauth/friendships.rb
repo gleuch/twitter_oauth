@@ -1,13 +1,17 @@
 module TwitterOAuth
   class Client
     
-    def friends_ids(page=1)
-      oauth_response = access_token.get("/friends/ids.json?page=#{page}")
+    def friends_ids(args={})
+      allowed = %w(page cursor)
+      args = args.reject{|k,v| !allowed.include?(k.to_s.downcase)}.map{|k,v| "#{k}=#{v}"}.join('&')
+      oauth_response = access_token.get("/friends/ids.json?#{args}")
       JSON.parse(oauth_response.body)
     end
     
-    def followers_ids(page=1)
-      oauth_response = access_token.get("/followers/ids.json?page=#{page}")
+    def followers_ids(args={})
+      allowed = %w(page cursor)
+      args = args.reject{|k,v| !allowed.include?(k.to_s.downcase)}.map{|k,v| "#{k}=#{v}"}.join('&')
+      oauth_response = access_token.get("/followers/ids.json?#{args}")
       JSON.parse(oauth_response.body)
     end
     
